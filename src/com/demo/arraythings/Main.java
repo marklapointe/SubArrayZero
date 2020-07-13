@@ -27,22 +27,29 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		System.out.println("Start");
+		
+		// Ok, it was supposed to be an array,
+		// I've been on a tree kick.
+		
 		Node root = new Node(10);
 		root.ordered_insert(1);
 		root.ordered_insert(-1);
 		root.ordered_insert(11);
 		root.ordered_insert(77);
 		
+		// Result should be [-1,1]
 		Permutation permutation = root.findLongestPermutation(0);
 		System.out.println(permutation.toString());
 		
+		// Result should be [-1,1,10,11]
 		Permutation permutation2 = root.findLongestPermutation(21);
 		System.out.println(permutation2.toString());
 		
+		// Result should be all of the numbers [-1,1,10,11,77]
 		Permutation permutation3 = root.findLongestPermutation(98);
 		System.out.println(permutation3.toString());
 		
-		
+		// This will return a null, because there will not be any result found
 		Permutation permutation4 = root.findLongestPermutation(1000000);
 		if (permutation4 != null) {
 			System.out.println("BAD: " + permutation4.toString());
