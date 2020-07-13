@@ -38,8 +38,10 @@ public class Main {
 		root.ordered_insert(77);
 		
 		// Result should be [-1,1]
-		Permutation permutation = root.findLongestPermutation(0);
+		Permutation permutation = root.findLongestPermutation(0); // This is for the inital question
 		System.out.println(permutation.toString());
+		
+		// Testing other targets
 		
 		// Result should be [-1,1,10,11]
 		Permutation permutation2 = root.findLongestPermutation(21);
