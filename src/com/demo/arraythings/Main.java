@@ -121,6 +121,7 @@ class Node {
 
 	public Permutation findLongestPermutation (Integer target) {
 		List<Permutation> permutations = new ArrayList<Permutation>();
+		// An ARRAYlist gets formed here. -- so consider transforming the basic array to an arraylist is done here.
 		this.getPermutations(permutations,new ArrayList<Integer>(),this.getInOrderInteger());
 		Permutation result = this.findLongest(permutations, target);
 		return result;
