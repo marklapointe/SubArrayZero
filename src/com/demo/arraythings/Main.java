@@ -127,7 +127,7 @@ class Node {
 		
 	}
 	
-	public Permutation findLongest (List<Permutation> permutations, Integer target) {
+	private Permutation findLongest (List<Permutation> permutations, Integer target) {
 		Permutation result = null;
 		for (Permutation p: permutations) {
 			if (p.value == target) {
